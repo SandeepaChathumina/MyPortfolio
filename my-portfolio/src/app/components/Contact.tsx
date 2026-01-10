@@ -14,20 +14,20 @@ export default function Contact() {
         className="relative overflow-hidden bg-zinc-900/50 border border-white/5 rounded-[3rem] p-12 md:p-24 text-center backdrop-blur-xl"
       >
         {/* Background Decorative Glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[300px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[300px] bg-orange-600/10 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="relative z-10 space-y-8">
           {/* Section Tag */}
           <div className="flex justify-center">
-             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20">
-              <MessageCircle size={14} className="text-blue-400" />
-              <span className="text-[10px] font-bold tracking-widest uppercase text-blue-400">Get in Touch</span>
+             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20">
+              <MessageCircle size={14} className="text-orange-400" />
+              <span className="text-[10px] font-bold tracking-widest uppercase text-orange-400">Get in Touch</span>
             </div>
           </div>
 
           <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-zinc-100">
             Let’s build the <br />
-            <span className="text-blue-500">future together.</span>
+            <span className="text-orange-500">future together.</span>
           </h2>
 
           <p className="text-zinc-400 max-w-xl mx-auto text-lg md:text-xl font-light leading-relaxed">

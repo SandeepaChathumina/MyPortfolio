@@ -27,12 +27,12 @@ export default function Projects() {
     <section className="py-20 w-full max-w-[1400px] mx-auto px-4">
       {/* Section Header */}
       <div className="mb-12 space-y-4">
-        <div className="flex items-center gap-2 text-blue-400 font-medium tracking-widest uppercase text-xs">
+        <div className="flex items-center gap-2 text-orange-400 font-medium tracking-widest uppercase text-xs">
           <Briefcase size={14} />
           <span>Case Studies</span>
         </div>
         <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-zinc-100">
-          Selected <span className="text-blue-500">Work.</span>
+          Selected <span className="text-orange-500">Work.</span>
         </h2>
       </div>
 
@@ -45,7 +45,7 @@ export default function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="group relative bg-zinc-900/50 border border-white/5 rounded-[2rem] overflow-hidden backdrop-blur-sm hover:border-blue-500/30 transition-all duration-500"
+            className="group relative bg-zinc-900/50 border border-white/5 rounded-[2rem] overflow-hidden backdrop-blur-sm hover:border-orange-500/30 transition-all duration-500"
           >
             {/* Image Container */}
             <div className="h-64 md:h-80 overflow-hidden relative">
@@ -66,7 +66,7 @@ export default function Projects() {
             <div className="p-8 relative z-30">
               <div className="flex justify-between items-start mb-4">
                 <div>
-                  <h3 className="text-2xl font-bold text-zinc-100 group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-2xl font-bold text-zinc-100 group-hover:text-orange-400 transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-zinc-400 text-sm mt-2 leading-relaxed max-w-[90%]">
@@ -86,7 +86,7 @@ export default function Projects() {
               {/* Tech Tags */}
               <div className="flex flex-wrap gap-2 mt-6">
                 {project.tech.map((t) => (
-                  <span key={t} className="px-3 py-1 bg-zinc-800 border border-white/5 rounded-lg text-[10px] font-bold uppercase tracking-wider text-blue-400">
+                  <span key={t} className="px-3 py-1 bg-zinc-800 border border-white/5 rounded-lg text-[10px] font-bold uppercase tracking-wider text-orange-400">
                     {t}
                   </span>
                 ))}
