@@ -24,7 +24,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="py-20 w-full max-w-[1400px] mx-auto px-4">
+    <section className="py-20 w-full max-w-350 mx-auto px-4">
       {/* Section Header */}
       <div className="mb-12 space-y-4">
         <div className="flex items-center gap-2 text-orange-400 font-medium tracking-widest uppercase text-xs">
@@ -45,7 +45,7 @@ export default function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="group relative bg-zinc-900/50 border border-white/5 rounded-[2rem] overflow-hidden backdrop-blur-sm hover:border-orange-500/30 transition-all duration-500"
+            className="group relative bg-zinc-900/50 border border-white/5 rounded-4xl overflow-hidden backdrop-blur-sm hover:border-orange-500/30 transition-all duration-500"
           >
             {/* Image Container */}
             <div className="h-64 md:h-80 overflow-hidden relative">
@@ -59,7 +59,7 @@ export default function Projects() {
                     className="object-cover opacity-60 group-hover:opacity-100 transition-opacity"
                  />
               </div>
-              <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-zinc-950 to-transparent z-20" />
+              <div className="absolute bottom-0 left-0 right-0 h-24 bg-linear-to-t from-zinc-950 to-transparent z-20" />
             </div>
 
             {/* Content Container */}

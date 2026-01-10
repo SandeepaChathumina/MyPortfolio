@@ -11,7 +11,7 @@ const certificates = [
 
 export default function Certificates() {
   return (
-    <section className="py-20 w-full max-w-[1400px] mx-auto px-4">
+    <section className="py-20 w-full max-w-350 mx-auto px-4">
       {/* Section Header */}
       <div className="mb-12 space-y-4">
         <div className="flex items-center gap-2 text-orange-400 font-medium tracking-widest uppercase text-xs">
@@ -33,7 +33,7 @@ export default function Certificates() {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
             whileHover={{ x: 10 }}
-            className="flex items-center justify-between p-6 rounded-[2rem] bg-zinc-900/50 border border-white/5 hover:border-orange-500/50 transition-all group backdrop-blur-sm"
+            className="flex items-center justify-between p-6 rounded-4xl bg-zinc-900/50 border border-white/5 hover:border-orange-500/50 transition-all group backdrop-blur-sm"
           >
             <div className="flex items-center gap-5">
               <div className="p-4 bg-zinc-800 rounded-2xl text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300">

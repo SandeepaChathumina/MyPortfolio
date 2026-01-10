@@ -4,9 +4,9 @@ import { Github, Linkedin, Terminal, MapPin, FileText, Cpu, Sparkles, Globe } fr
 
 export default function Hero() {
   return (
-    <section className="pt-12 pb-6 w-full max-w-[1400px] mx-auto px-4 relative">
+    <section className="pt-12 pb-6 w-full max-w-350 mx-auto px-4 relative">
       {/* Background Grid Decoration */}
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#ffa50005_1px,transparent_1px),linear-gradient(to_bottom,#ffa50005_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#ffa50005_1px,transparent_1px),linear-gradient(to_bottom,#ffa50005_1px,transparent_1px)] bg-size-[40px_40px]"></div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
         
@@ -14,7 +14,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="lg:col-span-8 p-8 md:p-10 rounded-[2rem] bg-zinc-900/50 border border-orange-500/10 backdrop-blur-md flex flex-col justify-between min-h-[450px] relative overflow-hidden group"
+          className="lg:col-span-8 p-8 md:p-10 rounded-4xl bg-zinc-900/50 border border-orange-500/10 backdrop-blur-md flex flex-col justify-between min-h-112.5 relative overflow-hidden group"
         >
           {/* Subtle Orange Ambient Glow */}
           <div className="absolute -top-24 -left-24 w-64 h-64 bg-orange-500/5 rounded-full blur-[100px] group-hover:bg-orange-500/10 transition-colors duration-700" />
@@ -61,7 +61,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.1 }}
-            className="p-6 rounded-[2rem] bg-zinc-900/50 border border-white/5 backdrop-blur-md flex flex-col justify-between group hover:border-orange-500/20 transition-all"
+            className="p-6 rounded-4xl bg-zinc-900/50 border border-white/5 backdrop-blur-md flex flex-col justify-between group hover:border-orange-500/20 transition-all"
           >
             <div className="flex justify-between items-start mb-4">
               <div className="p-3 bg-orange-500/10 rounded-2xl text-orange-400">
@@ -82,7 +82,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
-            className="p-6 rounded-[2rem] bg-zinc-900/50 border border-white/5 backdrop-blur-md flex flex-col justify-between group hover:border-orange-500/20 transition-all"
+            className="p-6 rounded-4xl bg-zinc-900/50 border border-white/5 backdrop-blur-md flex flex-col justify-between group hover:border-orange-500/20 transition-all"
           >
             <div className="flex justify-between items-start mb-4">
               <div className="p-3 bg-zinc-800 rounded-2xl text-orange-400">
