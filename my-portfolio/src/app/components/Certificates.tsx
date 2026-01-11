@@ -1,17 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
-import { Award, ArrowUpRight, CheckCircle2, ShieldCheck } from "lucide-react";
-
-const certificates = [
-  { title: "Next.js Professional", issuer: "Vercel", date: "2025" },
-  { title: "AWS Cloud Practitioner", issuer: "Amazon", date: "2024" },
-  { title: "Meta Front-End Engineer", issuer: "Coursera", date: "2024" },
-  { title: "Google UX Design", issuer: "Coursera", date: "2023" }
-];
+import { ArrowUpRight, CheckCircle2, ShieldCheck } from "lucide-react";
+import { certificatesData } from "../data/certificates"; // Import dynamic data
 
 export default function Certificates() {
   return (
-    <section className="py-20 w-full max-w-350 mx-auto px-4">
+    <section className="py-20 w-full max-w-[1400px] mx-auto px-4">
       {/* Section Header */}
       <div className="mb-12 space-y-4">
         <div className="flex items-center gap-2 text-orange-400 font-medium tracking-widest uppercase text-xs">
@@ -25,15 +19,18 @@ export default function Certificates() {
       
       {/* Certificates Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {certificates.map((cert, index) => (
-          <motion.div 
-            key={index}
+        {certificatesData.map((cert, index) => (
+          <motion.a 
+            key={cert.title}
+            href={cert.url}
+            target="_blank"
+            rel="noopener noreferrer"
             initial={{ opacity: 0, x: -10 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
             whileHover={{ x: 10 }}
-            className="flex items-center justify-between p-6 rounded-4xl bg-zinc-900/50 border border-white/5 hover:border-orange-500/50 transition-all group backdrop-blur-sm"
+            className="flex items-center justify-between p-6 rounded-[2rem] bg-zinc-900/50 border border-white/5 hover:border-orange-500/50 transition-all group backdrop-blur-sm"
           >
             <div className="flex items-center gap-5">
               <div className="p-4 bg-zinc-800 rounded-2xl text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300">
@@ -55,7 +52,7 @@ export default function Certificates() {
                 size={20} 
               />
             </div>
-          </motion.div>
+          </motion.a>
         ))}
       </div>
     </section>
