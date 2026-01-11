@@ -8,28 +8,28 @@ export interface Certificate {
 
 export const certificatesData: Certificate[] = [
   { 
-    title: "Next.js Professional", 
-    issuer: "Vercel", 
+    title: "Front-End Web Development", 
+    issuer: "Faculty of Information Technology, University of Moratuwa", 
     date: "2025",
-    url: "#", 
+    url: "https://drive.google.com/file/d/1JlqO2i92rwdnUx5LwEqmLmmO0-eC12bF/view?usp=sharing", 
   },
   { 
-    title: "AWS Cloud Practitioner", 
-    issuer: "Amazon", 
-    date: "2024",
-    url: "#" 
+    title: "AI/ML Engineer - Stage 1", 
+    issuer: "Faculty of Computing, SLIIT", 
+    date: "2025",
+    url: "https://drive.google.com/file/d/10npM4a2MwZBXkm9Qq9nrYkNDP09vd7sg/view?usp=sharing" 
   },
   { 
-    title: "Meta Front-End Engineer", 
-    issuer: "Coursera", 
-    date: "2024",
-    url: "#" 
+    title: "AI/ML Engineer - Stage 2", 
+    issuer: "Faculty of Computing, SLIIT", 
+    date: "2025",
+    url: "https://drive.google.com/file/d/1SN2zoes2uhQmdm0IusMkeeRfhT8Hd7-O/view?usp=sharing" 
   },
   { 
-    title: "Google UX Design", 
-    issuer: "Coursera", 
-    date: "2023",
-    url: "#" 
+    title: "Web Design for Beginners", 
+    issuer: "Faculty of Information Technology, University of Moratuwa", 
+    date: "2025",
+    url: "https://drive.google.com/file/d/1edTUo4upEqJ74RjXUcBP_alkhbJWmERu/view?usp=sharing" 
   },
   // To add a new one, just paste a new object here!
 ];
