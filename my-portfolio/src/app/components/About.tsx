@@ -18,7 +18,7 @@ export default function About() {
           <div className="absolute -inset-1 bg-linear-to-r from-orange-500 to-cyan-500 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000" />
           <div className="relative overflow-hidden rounded-4xl aspect-4/5 border border-white/5 bg-zinc-900">
             <Image
-              src="/my1.jpg"
+              src="/my3.jpg"
               alt="Sandeepa - Software Engineering Undergraduate"
               fill
               className="object-cover grayscale hover:grayscale-0 transition duration-700 scale-105 hover:scale-100"
