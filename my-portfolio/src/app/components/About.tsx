@@ -15,7 +15,7 @@ export default function About() {
       >
         {/* IMAGE BLOCK */}
         <div className="lg:col-span-5 relative group">
-          <div className="absolute -inset-1 bg-linear-to-r from-orange-500 to-cyan-500 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000" />
+          <div className="absolute -inset-1 bg-linear-to-r from-orange-500 to-yellow-500 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000" />
           <div className="relative overflow-hidden rounded-4xl aspect-4/5 border border-white/5 bg-zinc-900">
             <Image
               src="/mypic.png"
