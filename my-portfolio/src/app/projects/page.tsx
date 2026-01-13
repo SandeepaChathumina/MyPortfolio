@@ -9,10 +9,7 @@ export default function ProjectsPage() {
   const router = useRouter();
 
   return (
-    /* 1. Full-width background wrapper */
     <main className="min-h-screen bg-zinc-950 w-full overflow-x-hidden">
-      
-      {/* 2. THE CENTERED CONTAINER - This MUST match your other pages exactly */}
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 py-20">
         
         {/* HEADER SECTION */}
@@ -57,14 +54,68 @@ export default function ProjectsPage() {
                          overflow-hidden backdrop-blur-md hover:border-orange-500/30 
                          transition-all duration-500 flex flex-col h-full"
             >
-              {/* Image, Content, and Link code remains the same... */}
-              <div className="relative h-64 overflow-hidden">
-                <Image src={project.image} alt={project.title} fill className="object-cover opacity-60 group-hover:opacity-100 transition-all duration-700" />
+              {/* Image Container */}
+              <div className="relative h-64 overflow-hidden shrink-0">
+                <div className="absolute inset-0 bg-zinc-950/30 group-hover:bg-transparent transition-colors z-10" />
+                <Image 
+                  src={project.image} 
+                  alt={project.title} 
+                  fill 
+                  className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" 
+                />
+                <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-zinc-950 to-transparent z-20" />
               </div>
+
+              {/* Content Container */}
               <div className="p-8 flex flex-col flex-grow">
-                <h3 className="text-2xl font-bold text-zinc-100 group-hover:text-orange-500 transition-colors">{project.title}</h3>
-                <p className="text-zinc-400 text-sm mt-4 leading-relaxed font-light">{project.description}</p>
-                {/* ... links and tech tags ... */}
+                <div className="flex justify-between items-start gap-4 mb-4">
+                  <h3 className="text-2xl font-bold text-zinc-100 group-hover:text-orange-500 transition-colors">
+                    {project.title}
+                  </h3>
+                  
+                  {/* ICONS ADDED HERE */}
+                  <div className="flex gap-3 shrink-0">
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="GitHub Repository"
+                        className="text-zinc-500 hover:text-orange-400 transition-colors"
+                      >
+                        <Github size={22} />
+                      </a>
+                    )}
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Live Demo"
+                        className="text-zinc-500 hover:text-orange-400 transition-colors"
+                      >
+                        <ExternalLink size={22} />
+                      </a>
+                    )}
+                  </div>
+                </div>
+
+                <p className="text-zinc-400 text-sm leading-relaxed font-light mb-6 flex-grow">
+                  {project.description}
+                </p>
+
+                {/* Tech Tags */}
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  {project.tech.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1 bg-zinc-800 border border-white/5 rounded-lg
+                                 text-[10px] font-bold uppercase tracking-wider text-orange-400"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </motion.article>
           ))}

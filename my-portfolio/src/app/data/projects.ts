@@ -15,7 +15,7 @@ export const projectsData: Project[] = [
       "A full-stack bus rental and management system designed to simplify bus booking, scheduling, and fleet management. The platform supports user-friendly booking, admin management features, and efficient data handling for real-world transportation needs.",
     tech: ["MongoDB", "Express.js", "React", "Node.js"],
     link: "#",
-    github: "#",
+    github: "https://github.com/SandeepaChathumina/Bus-Rental-Management-System-Bus-Zone-",
     image: "/bus1.png",
   },
   {
@@ -25,7 +25,7 @@ export const projectsData: Project[] = [
     tech: ["Kotlin"],
     link: "#",
     github:
-      "https://github.com/SandeepaChathumina/Bus-Rental-Management-System-Bus-Zone-",
+      "https://github.com/SandeepaChathumina/Health-Routine-App",
     image: "/app1.png",
   },
  
