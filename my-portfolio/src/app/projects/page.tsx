@@ -10,7 +10,7 @@ export default function ProjectsPage() {
 
   return (
     <main className="min-h-screen bg-zinc-950 w-full overflow-x-hidden">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16 py-20">
+      <div className="max-w-350 mx-auto px-6 md:px-12 lg:px-16 py-20">
         
         {/* HEADER SECTION */}
         <header className="mb-20 space-y-8">
@@ -63,11 +63,11 @@ export default function ProjectsPage() {
                   fill 
                   className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" 
                 />
-                <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-zinc-950 to-transparent z-20" />
+                <div className="absolute bottom-0 left-0 right-0 h-24 bg-linear-to-t from-zinc-950 to-transparent z-20" />
               </div>
 
               {/* Content Container */}
-              <div className="p-8 flex flex-col flex-grow">
+              <div className="p-8 flex flex-col grow">
                 <div className="flex justify-between items-start gap-4 mb-4">
                   <h3 className="text-2xl font-bold text-zinc-100 group-hover:text-orange-500 transition-colors">
                     {project.title}
@@ -100,7 +100,7 @@ export default function ProjectsPage() {
                   </div>
                 </div>
 
-                <p className="text-zinc-400 text-sm leading-relaxed font-light mb-6 flex-grow">
+                <p className="text-zinc-400 text-sm leading-relaxed font-light mb-6 grow">
                   {project.description}
                 </p>
 
