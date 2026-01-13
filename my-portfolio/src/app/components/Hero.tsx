@@ -38,7 +38,8 @@ export default function Hero() {
 
             {/* Heading */}
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] mb-6">
-              I'm <span className="text-orange-500">Sandeepa</span><br />
+              I'm <span className="text-orange-500">Sandeepa</span>
+              <br />
               <span className="text-zinc-100">
                 Software Engineering <br />
                 Undergraduate & Full-Stack Developer.
@@ -48,11 +49,7 @@ export default function Hero() {
             {/* Description */}
             <p className="text-zinc-400 text-base md:text-lg max-w-lg leading-relaxed font-light">
               Building modern web applications with
-              <span className="text-orange-400 font-medium">
-                {" "}
-                clean UI
-              </span>{" "}
-              and
+              <span className="text-orange-400 font-medium"> clean UI</span> and
               <span className="text-zinc-200 font-medium">
                 {" "}
                 real-world full-stack solutions
@@ -63,14 +60,21 @@ export default function Hero() {
 
           {/* Actions */}
           <div className="flex items-center gap-4 mt-8 relative z-10">
-            <button className="flex items-center gap-2 bg-orange-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-orange-600 transition-all text-sm shadow-lg shadow-orange-500/20">
+            {/* Updated Resume Link */}
+            <a
+              href="/Sandeepa_Karunanayake_Resume.pdf" // Path to your file in the public folder
+              target="_blank" // Opens in a new tab for viewing
+              rel="noopener noreferrer" // Security best practice
+              download="Sandeepa_Resume.pdf" // Forces download if clicked
+              className="flex items-center gap-2 bg-orange-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-orange-600 transition-all text-sm shadow-lg shadow-orange-500/20 cursor-pointer"
+            >
               <FileText size={18} />
               View Resume
-            </button>
+            </a>
 
             <div className="flex gap-2">
               <a
-                href="#"
+                href="https://github.com/SandeepaChathumina"
                 className="p-3 bg-zinc-800/50 rounded-xl border border-white/5 hover:border-orange-500/30 hover:bg-zinc-700 transition-all"
               >
                 <Github
@@ -79,7 +83,7 @@ export default function Hero() {
                 />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/sandeepa-karunanayake-39168127a/"
                 className="p-3 bg-zinc-800/50 rounded-xl border border-white/5 hover:border-orange-500/30 hover:bg-zinc-700 transition-all"
               >
                 <Linkedin
