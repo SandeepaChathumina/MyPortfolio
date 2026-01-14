@@ -4,7 +4,7 @@ import { Mail, Send, MessageCircle, Github, Linkedin, Instagram, Facebook } from
 
 export default function Contact() {
   return (
-    <section className="py-24 w-full max-w-[1400px] mx-auto px-4">
+    <section className="py-24 w-full max-w-350 mx-auto px-4">
       <motion.div 
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -13,7 +13,7 @@ export default function Contact() {
         className="relative overflow-hidden bg-zinc-900/50 border border-white/5 rounded-[3rem] p-12 md:p-24 text-center backdrop-blur-xl"
       >
         {/* Background Decorative Glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[300px] bg-orange-600/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-100 h-75 bg-orange-600/10 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="relative z-10 space-y-10">
           {/* Section Tag */}
@@ -49,16 +49,16 @@ export default function Contact() {
 
             {/* Social Icons Row */}
             <div className="flex items-center gap-4">
-              <a href="#" target="_blank" className="p-4 bg-zinc-800/50 rounded-2xl border border-white/5 text-zinc-400 hover:text-orange-500 hover:border-orange-500/30 transition-all group">
+              <a href="https://www.linkedin.com/in/sandeepa-karunanayake-39168127a/" target="_blank" className="p-4 bg-zinc-800/50 rounded-2xl border border-white/5 text-zinc-400 hover:text-orange-500 hover:border-orange-500/30 transition-all group">
                 <Linkedin size={22} className="group-hover:scale-110 transition-transform" />
               </a>
-              <a href="#" target="_blank" className="p-4 bg-zinc-800/50 rounded-2xl border border-white/5 text-zinc-400 hover:text-orange-500 hover:border-orange-500/30 transition-all group">
+              <a href="https://github.com/SandeepaChathumina" target="_blank" className="p-4 bg-zinc-800/50 rounded-2xl border border-white/5 text-zinc-400 hover:text-orange-500 hover:border-orange-500/30 transition-all group">
                 <Github size={22} className="group-hover:scale-110 transition-transform" />
               </a>
-              <a href="#" target="_blank" className="p-4 bg-zinc-800/50 rounded-2xl border border-white/5 text-zinc-400 hover:text-orange-500 hover:border-orange-500/30 transition-all group">
+              <a href="https://www.instagram.com/sandeepachathumina2.0?igsh=cjg4amNlejN6d2Jq" target="_blank" className="p-4 bg-zinc-800/50 rounded-2xl border border-white/5 text-zinc-400 hover:text-orange-500 hover:border-orange-500/30 transition-all group">
                 <Instagram size={22} className="group-hover:scale-110 transition-transform" />
               </a>
-              <a href="#" target="_blank" className="p-4 bg-zinc-800/50 rounded-2xl border border-white/5 text-zinc-400 hover:text-orange-500 hover:border-orange-500/30 transition-all group">
+              <a href="https://www.facebook.com/profile.php?id=61583922000638" target="_blank" className="p-4 bg-zinc-800/50 rounded-2xl border border-white/5 text-zinc-400 hover:text-orange-500 hover:border-orange-500/30 transition-all group">
                 <Facebook size={22} className="group-hover:scale-110 transition-transform" />
               </a>
             </div>
