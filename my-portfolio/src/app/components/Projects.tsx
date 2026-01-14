@@ -54,10 +54,7 @@ export default function Projects() {
           {[...projectsData, ...projectsData].map((project, index) => (
             <article
               key={`${project.title}-${index}`}
-              className="group relative shrink-0 w-[80vw] md:w-150
-                bg-zinc-900/50 border border-white/5 rounded-[2.5rem]
-                overflow-hidden backdrop-blur-sm
-                hover:border-orange-500/30 transition-all duration-500"
+              className="group relative shrink-0 w-[80vw] md:w-150 bg-zinc-900/50 border border-white/5 rounded-[2.5rem] overflow-hidden backdrop-blur-sm hover:border-orange-500/30 transition-all duration-500"
             >
               {/* Image */}
               <div className="h-64 md:h-80 relative overflow-hidden">
@@ -88,6 +85,7 @@ export default function Projects() {
                       <a
                         href={project.github}
                         target="_blank"
+                        rel="noopener noreferrer"
                         aria-label="GitHub Repository"
                         className="text-zinc-500 hover:text-orange-400 transition-colors"
                       >
@@ -98,6 +96,7 @@ export default function Projects() {
                       <a
                         href={project.link}
                         target="_blank"
+                        rel="noopener noreferrer"
                         aria-label="Live Demo"
                         className="text-zinc-500 hover:text-orange-400 transition-colors"
                       >
@@ -112,8 +111,7 @@ export default function Projects() {
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-zinc-800 border border-white/5 rounded-lg
-                        text-[10px] font-bold uppercase tracking-wider text-orange-400"
+                      className="px-3 py-1 bg-zinc-800 border border-white/5 rounded-lg text-[10px] font-bold uppercase tracking-wider text-orange-400"
                     >
                       {tech}
                     </span>
