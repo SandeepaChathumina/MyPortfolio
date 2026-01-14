@@ -38,7 +38,7 @@ export default function Hero() {
 
             {/* Heading */}
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] mb-6">
-              I'm <span className="text-red-500">Sandeepa</span>
+              I'm <span className="text-orange-500">Sandeepa</span>
               <br />
               <span className="text-zinc-100">
                 Software Engineering <br />
