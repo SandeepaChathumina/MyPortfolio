@@ -1,0 +1,126 @@
+"use client";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { ExternalLink, Github, ArrowLeft, Briefcase } from "lucide-react";
+import { projectsData } from "@/app/data/projects";
+import { useRouter } from "next/navigation";
+
+export default function ProjectsPage() {
+  const router = useRouter();
+
+  return (
+    <main className="min-h-screen bg-zinc-950 w-full overflow-x-hidden">
+      <div className="max-w-350 mx-auto px-6 md:px-12 lg:px-16 py-20">
+        
+        {/* HEADER SECTION */}
+        <header className="mb-20 space-y-8">
+          <motion.button
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            onClick={() => router.push("/")}
+            className="group flex items-center gap-2 text-sm text-zinc-500 hover:text-orange-400 transition-colors w-fit"
+          >
+            <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
+            <span>Back to Home</span>
+          </motion.button>
+
+          <div className="space-y-4">
+            <div className="flex items-center gap-2 text-orange-500 font-bold tracking-[0.2em] uppercase text-[10px]">
+              <Briefcase size={14} />
+              <span>Full Portfolio</span>
+            </div>
+
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-zinc-100">
+              Everything I’ve <span className="text-orange-500">Built.</span>
+            </h1>
+
+            <p className="text-zinc-400 max-w-2xl text-lg md:text-xl font-light leading-relaxed">
+              A complete collection of my academic and personal projects,
+              showcasing my growth as a software engineering undergraduate.
+            </p>
+          </div>
+        </header>
+
+        {/* PROJECTS GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-10">
+          {projectsData.map((project, index) => (
+            <motion.article
+              key={project.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
+              viewport={{ once: true }}
+              className="group bg-zinc-900/40 border border-white/5 rounded-[2.5rem] 
+                         overflow-hidden backdrop-blur-md hover:border-orange-500/30 
+                         transition-all duration-500 flex flex-col h-full"
+            >
+              {/* Image Container */}
+              <div className="relative h-64 overflow-hidden shrink-0">
+                <div className="absolute inset-0 bg-zinc-950/30 group-hover:bg-transparent transition-colors z-10" />
+                <Image 
+                  src={project.image} 
+                  alt={project.title} 
+                  fill 
+                  className="object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" 
+                />
+                <div className="absolute bottom-0 left-0 right-0 h-24 bg-linear-to-t from-zinc-950 to-transparent z-20" />
+              </div>
+
+              {/* Content Container */}
+              <div className="p-8 flex flex-col grow">
+                <div className="flex justify-between items-start gap-4 mb-4">
+                  <h3 className="text-2xl font-bold text-zinc-100 group-hover:text-orange-500 transition-colors">
+                    {project.title}
+                  </h3>
+                  
+                  {/* ICONS ADDED HERE */}
+                  <div className="flex gap-3 shrink-0">
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="GitHub Repository"
+                        className="text-zinc-500 hover:text-orange-400 transition-colors"
+                      >
+                        <Github size={22} />
+                      </a>
+                    )}
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Live Demo"
+                        className="text-zinc-500 hover:text-orange-400 transition-colors"
+                      >
+                        <ExternalLink size={22} />
+                      </a>
+                    )}
+                  </div>
+                </div>
+
+                <p className="text-zinc-400 text-sm leading-relaxed font-light mb-6 grow">
+                  {project.description}
+                </p>
+
+                {/* Tech Tags */}
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  {project.tech.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-3 py-1 bg-zinc-800 border border-white/5 rounded-lg
+                                 text-[10px] font-bold uppercase tracking-wider text-orange-400"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </motion.article>
+          ))}
+        </div>
+      </div>
+    </main>
+  );
+}
