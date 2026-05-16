@@ -28,6 +28,16 @@ export const projectsData: Project[] = [
       "https://github.com/SandeepaChathumina/Health-Routine-App",
     image: "/app1.png",
   },
+  {
+    title: "AGRIHUB-LK",
+    description:
+      "A MERN stack agricultural marketplace platform designed to connect farmers, distributors, transporters, and admins in one system. The platform supports role-based access, secure authentication, crop management, order handling, transportation management, real-time messaging, and admin control features to improve agricultural product distribution and communication.",
+    tech: ["MongoDB", "Express.js", "React", "Node.js", "Tailwind CSS", "JWT", "Socket.io"],
+    link: "https://agri-hub-lk-frontend.vercel.app/",
+    github:
+      "https://github.com/SandeepaChathumina/AgriHUB-LK",
+    image: "/agrihub.png",
+  },
  
   // To add a new project, just copy-paste an object here
 ];
