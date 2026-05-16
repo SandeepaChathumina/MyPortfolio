@@ -38,6 +38,15 @@ export const projectsData: Project[] = [
       "https://github.com/SandeepaChathumina/AgriHUB-LK",
     image: "/agrihub.png",
   },
+  {
+  title: "Smart Healthcare System",
+  description:
+    "A microservices-based healthcare management system designed to support patients, doctors, appointments, payments, notifications, and telemedicine features. The system uses independent services with secure authentication, service-to-service communication, Docker containerization, and Kubernetes deployment for better scalability and maintainability.",
+  tech: ["Node.js", "Express.js", "MongoDB", "React", "Docker", "Kubernetes", "JWT"],
+  link: "#",
+  github: "https://github.com/SandeepaChathumina/smart-healthcare-platform",
+  image: "/smart-healthcare.png",
+},
  
   // To add a new project, just copy-paste an object here
 ];
