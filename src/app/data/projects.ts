@@ -47,6 +47,26 @@ export const projectsData: Project[] = [
   github: "https://github.com/SandeepaChathumina/smart-healthcare-platform",
   image: "/smart-healthcare.png",
 },
+{
+  title: "PaperMate AI",
+  description:
+    "A MERN stack AI-powered study assistant that helps students generate structured past paper answers. The platform supports module management, lecture note creation, PDF lecture upload with browser-based text extraction, AI answer generation using Gemini AI, answer history, PDF export, secure authentication, Google login, OTP email verification, and an admin dashboard for monitoring users, modules, notes, and answers.",
+  tech: [
+    "MongoDB",
+    "Express.js",
+    "React",
+    "Node.js",
+    "Tailwind CSS",
+    "JWT",
+    "Gemini AI",
+    "Google OAuth",
+    "pdfjs-dist",
+    "jsPDF",
+  ],
+  link: "https://papermate-ai-wxnd.vercel.app/",
+  github: "https://github.com/SandeepaChathumina/papermate-ai",
+  image: "/papermate.png",
+},
  
   // To add a new project, just copy-paste an object here
 ];
